@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Up Sneaks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <section class="slides-container">
+        <article id="general-section" class="slide">
+            <nav class="nav-container">
+                <ul>
+                    <li>
+                        <a href="#general-section" class="category-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#men-section" class="category-link">Men</a>
+                    </li>
+                    <li>
+                        <a href="#women-section" class="category-link">Women</a>
+                    </li>
+                    <li>
+                        <a href="#kid-section" class="category-link">Kids</a>
+                    </li>
+                </ul>
+            </nav>
+            <header>
+                <div class="brand-img-box">
+                    <img class="brand-img" src="/assets/logo-shoes.svg" alt="Logo de Marca">
+                </div>
+                <section class="brand-box">
+                    <div class="slogan-box">
+                        <h2 class="brand-text">STEP UP</h2>
+                        
+                    </div>
+                    <!--<h2 class="brand-text">STEP<br>UP</h2>-->
+                    <!--"Eleva tu estilo, paso a paso."
+                    "Pisando fuerte con StepUp Sneaks."
+                    "Tu paso, tu estilo, nuestras Sneaks."
+                    "Encuentra tu huella con StepUp Sneaks." 
+                    "Pisando tendencias, StepUp Sneaks te guía." -->
+                </section>
+                <section class="access-box">
+                    <a href="#"><img src="/assets/search.svg" alt="" class="search-logo"></a>
+                    <a href="#"><img src="/assets/like.svg" alt="" class="like-logo"></a>
+                    <a href="#"><img src="/assets/cart.svg" alt="" class="cart-logo"></a>
+                    <a href="#"><img src="/assets/profile.svg" alt="" class="profile-logo"></a>
+                </section>
+            </header>
+        </article>
+        <article id="men-section" class="slide">
+            <h2>Slide Hombres</h2>
+        </article>
+        <article id="women-section" class="slide">
+            <h2>Slide Mujeres</h2>
+        </article>
+        <article id="kid-section"class="slide">
+            <h2>Slide Niños</h2>
+        </article>
+    </section>
+
+    <div>
+        <input type="checkbox" class="modal-help-button" />
+        <label class="modal-help-txt"><img src="/assets/help.svg" alt=""></label>
+        <footer class="help-menu">
+            <section class="form-container">
+                <h2>Formulario de Consulta</h2>
+                <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
+                    <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                    title="Nombre sólo acepta letras y espacios en blanco" required>
+                    <input type="email" name="correo" placeholder="Escribe tu correo" pattern="\w+@\w+\.\w+"
+                    title="Formato de correo inválido" required>
+                    <textarea name="comentarios" placeholder="Escribe tus consulta" cols="30" rows="10" required></textarea>
+                    <input type="submit">
+                </form>
+                <h4>Para salir del formulario hacer click en "?"</h4>
+            </section>
+        </footer>
+    </div> 
+</body>
+</html>

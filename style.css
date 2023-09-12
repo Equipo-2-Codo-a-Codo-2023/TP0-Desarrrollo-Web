@@ -1,0 +1,269 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif, Arial, Helvetica;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  scroll-behavior: smooth;
+  box-sizing: inherit;
+  text-decoration: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+header {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow:hidden;
+  width: 100vw;
+  height: 10vw;
+  max-height: 10vw;
+  background: linear-gradient(90deg, #00040e, #000a23);
+}
+.brand-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.brand-img {
+  width: 18vw;
+  height: inherit;
+  max-height: 18vh;
+}
+
+.brand-img-box{
+  float:left;
+}
+.slogan-box {
+  display: flex;
+  width: 40vw;
+  height: inherit;
+  max-height: 20vh;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.brand-slogan1{
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5vw;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  
+}
+.brand-slogan2,
+.brand-text {
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 95%;
+  font-size: 3vw;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  padding-left: 35%;
+}
+
+.category-link{
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.01rem; 
+  font-size: 1.2rem; 
+  font-style: italic; 
+  color:white;
+}
+
+.brand-slogan1 {
+  align-self: flex-start;
+}
+.brand-slogan2 {
+  align-self: flex-end;
+}
+.brand-text {
+  /*font-size: 4.5vw;*/
+  font-size: 3.4rem;
+  text-align: center;
+  width: 20vw;
+  max-height: 20vh;
+}
+
+.access-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20vw;
+  height: inherit;
+  max-height: 20vh;
+  padding-bottom: 2vw;
+}
+
+p{
+  font-size: 0.6rem;
+}
+
+.access-box img {
+  width: 2.5vw;
+  height: 2.5vw;
+  min-width: 3rem;
+}
+
+.nav-container ul {
+  background-color: #00040e;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 2rem;
+  min-height: 2rem;
+  max-height: 4.5vh;
+}
+
+.nav-container li {
+  font-size: 1.15rem;
+  display: inline-block;
+  /*border: thin solid rgb(0, 0, 0);*/
+}
+
+.slides-container {
+  width: 100%;
+  height: calc(100vh - 2rem);
+  margin-top: 2rem;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+}
+
+.slide {
+  background-color: lightblue;
+  position: relative;
+  width: 100vw;
+  height: inherit;
+  scroll-snap-align: center;
+}
+.slide:nth-child(odd) {
+  background-color: lightgreen;
+}
+
+.modal-help-button {
+  opacity: 0;
+  cursor: pointer;
+  position: fixed;
+  left: 1vw;
+  bottom: 1vw;
+  width: 2rem;
+  height: 2rem;
+  z-index: 10;
+}
+.modal-help-txt {
+  background-color: #000a23;
+  border-radius: 50%;
+  position: fixed;
+  left: 1vw;
+  bottom: 1vw;
+  width: 2rem;
+  height: 2rem;
+  z-index: 9;
+}
+.modal-help-txt img {
+  width: 2rem;
+  height: 2rem;
+}
+.help-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100vh;
+  background-color: #0009;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-help-button:checked ~ .help-menu {
+  transition: opacity 0.5s linear;
+  opacity: 100;
+  pointer-events: auto;
+}
+
+.form-container {
+  color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #00040e, #000a23);
+  border: medium solid lightblue;
+  border-radius: 5%;
+  width: 80%;
+  height: 60vh;
+}
+
+.contact-form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-form * {
+  display: block;
+  margin-top: 0.8rem;
+  width: 60%;
+}
+
+.contact-form > *::placeholder {
+  color: lightgrey;
+}
+
+.contact-form > *[required]:invalid {
+  border: 2px solid red;
+}
+
+.contact-form > *[required]:valid {
+  border: 2px solid green;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+.contact-form input[type="submit"]:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.contact-form input[type="submit"] {
+  width: 20%;
+  font-weight: bold;
+  color: #000;
+}
+.form-container h4{
+    margin-top: 1rem;
+    font-size: 0.6rem;
+    font-style: italic;
+}
