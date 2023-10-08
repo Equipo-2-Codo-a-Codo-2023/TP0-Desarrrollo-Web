@@ -84,7 +84,7 @@ header {
 .category-link{
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.01rem; 
-  font-size: 1.2rem; 
+  font-size: 1.6rem;
   font-style: italic; 
   color:white;
 }
@@ -97,7 +97,7 @@ header {
 }
 .brand-text {
   /*font-size: 4.5vw;*/
-  font-size: 3.4rem;
+  font-size: 9vh;
   text-align: center;
   width: 20vw;
   max-height: 20vh;
