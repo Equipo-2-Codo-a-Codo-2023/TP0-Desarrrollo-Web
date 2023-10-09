@@ -4,7 +4,7 @@ html {
   font-family: sans-serif, Arial, Helvetica;
   margin: 0;
 }
-
+ 
 *,
 *::after,
 *::before {
@@ -87,10 +87,6 @@ header {
   font-size: 1.6rem;
   font-style: italic; 
   color:white;
-}
-
-#dolarHoy{
-  font-size: 1.4rem;
 }
 
 .brand-slogan1 {
@@ -272,13 +268,75 @@ p{
     font-style: italic;
 }
 
-/* Pendiente hacer que se muestre bien el selector de moneda*/
-.currency {
-  opacity: 0;
-  position: fixed;
-  left: 1vw;
-  bottom: 1vw;
-  width: 2rem;
-  height: 2rem;
-  z-index: 10;
+
+/*-------------Cards Styles-----------------*/
+.men-slide{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
+
+.card-container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:space-between;
+  align-items:center;
+  background-color: white;
+  width: 20vw;
+  max-height: 50%;
+  border-radius: 1rem;
+  border: 2px solid lightgray;
+  overflow: hidden;
+}
+
+.card-container:hover{
+  box-shadow: 0px 0px 15px grey
+}
+
+.card-image{
+  margin: .5rem;
+}
+
+.card-image img{
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.card-info{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items:center;
+  height: 70%;
+  margin: .5rem .5rem;
+}
+
+.card-info-tittle{
+  height: 20%;
+  color: grey;
+}
+
+.card-info-description{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: darkgray;
+  width: inherit;
+  height: 55%;
+  overflow:hidden;
+  border-top: 1px solid grey ;
+  border-bottom: 1px solid grey;
+}
+
+.card-info-price{
+  font-size: 1rem;
+  font-weight: bold;
+  height: 25%;
+  margin-top: 5px;
+}
+
+.card-info-price::before{
+  content: "$ ";
+}
+

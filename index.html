@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <script src="js/scripts.js"></script>
 
 </head>
 <body>
@@ -27,9 +26,6 @@
                     </li>
                     <li>
                         <a href="#kid-section" class="category-link">Kids</a>
-                    </li>
-                    <li>
-                        <a href="https://dolarhoy.com/" target="_blank" id="dolarHoy" class="category-link">Cotizacion Dolar: </a>
                     </li>
                 </ul>
             </nav>
@@ -57,8 +53,17 @@
                 </section>
             </header>
         </article>
-        <article id="men-section" class="slide">
-            <h2>Slide Hombres</h2>
+        <article id="men-section" class="slide men-slide">
+            <section class= "card-container">
+                <div class="card-image">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_900385-MLA71884624867_092023-W.webp" alt="zapatilla generica">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-info-tittle">Zapatilla X</h3>
+                    <p class="card-info-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero, illo laboriosam ea, soluta porro architecto doloribus, explicabo vitae eos facilis dolores similique molestiae nobis quam quia veritatis provident iure.</p>
+                    <p class="card-info-price">30,000</p>
+                </div>
+            </section>
         </article>
         <article id="women-section" class="slide">
             <h2>Slide Mujeres</h2>
@@ -67,19 +72,7 @@
             <h2>Slide Niños</h2>
         </article>
     </section>
-    <div class="currency">
-        <table>
-            <tr>
-                <td>Moneda</td>
-                <td>
-                    <select name=moneda>
-                        <option value="ARS">ARS - Pesos Argentinos
-                        <option value="USD">USD - Dólar Estadounidense
-                    </select>
-                </td>
-            </tr>
-        </table>
-    </div>
+
     <div>
         <input type="checkbox" class="modal-help-button" />
         <label class="modal-help-txt"><img src="/assets/help.svg" alt=""></label>
@@ -98,5 +91,7 @@
             </section>
         </footer>
     </div> 
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
