@@ -1,6 +1,6 @@
 //API Request para la cotizacion del dolar a la fecha mas reciente
 async function fetchData() {
-    const url = 'https://dolarapi.com/v1/dolares/blue';
+    const url = 'https://api.bluelytics.com.ar/v2/latest';
     const options = { method: 'GET', headers: { Accept: 'application/json' } };
     try {
       const response = await fetch(url, options);
@@ -15,21 +15,18 @@ async function fetchData() {
 
   //Cuando se carga el HTML se ejecuta la request de la cotizacion del dolar
   document.addEventListener('DOMContentLoaded', function() {
+    //Llamado a la API para obtener la cotizacion del dolar blue
     const data= fetchData();
-    console.log('El HTML se ha cargado completamente.');
+    //Seleccion de los datos relevantes que proporciona la API
     data.then((resultado) => {
-        // Acceder a los datos dentro de la PromiseResult
-        const datos = resultado; 
-        const casa = datos.casa; 
-        const compra = datos.compra; 
-        const nombre = datos.nombre; 
-        const venta = datos.venta; 
-        const fechaActualizacion = datos.fechaActualizacion; 
+
+        const blue = resultado.blue;
+        const last_update = resultado.last_update;
+        const compraBlue = blue.value_buy;
 
         //Parsear la fecha de actualizacion a formato visual correcto
 
-        // Crear un objeto Date a partir de la cadena
-        const fechaHoraObjeto = new Date(fechaActualizacion);
+        const fechaHoraObjeto = new Date(last_update);
 
         // Formatear la fecha y hora en otro formato
         const opcionesFormato = {
@@ -37,19 +34,15 @@ async function fetchData() {
         month: "2-digit",
         day: "2-digit",
         hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        timeZoneName: "short"
+        minute: "2-digit"
         };
 
         const fechaHoraFormateada = fechaHoraObjeto.toLocaleString("es-ES", opcionesFormato);
 
-        // Ver lo enviado por la API
-        console.log('Casa:', casa);
-        console.log('Compra:', compra);
-        console.log('Nombre:', nombre);
-        console.log('Venta:', venta);
-        console.log('Fecha Actualizacion: ', fechaHoraFormateada); 
+        const datosDolar = document.getElementById('dolarHoy');
+
+        //Se incorpora el valor de compra del dolar blue y la ultima fecha de actualizacion a la seccion correspondiente en el nav
+        datosDolar.innerHTML=`Cotizacion Dolar Blue: $${compraBlue} (Actualizado el ${fechaHoraFormateada})`;
       })
       .catch((error) => {
         console.error('Error:', error);

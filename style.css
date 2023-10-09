@@ -89,6 +89,10 @@ header {
   color:white;
 }
 
+#dolarHoy{
+  font-size: 1.4rem;
+}
+
 .brand-slogan1 {
   align-self: flex-start;
 }
@@ -266,4 +270,15 @@ p{
     margin-top: 1rem;
     font-size: 0.6rem;
     font-style: italic;
+}
+
+/* Pendiente hacer que se muestre bien el selector de moneda*/
+.currency {
+  opacity: 0;
+  position: fixed;
+  left: 1vw;
+  bottom: 1vw;
+  width: 2rem;
+  height: 2rem;
+  z-index: 10;
 }
