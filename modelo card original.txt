@@ -1,0 +1,15 @@
+<section class= "card-container">
+    <input type="checkbox" class="add-cart-btn">
+    <label class="add-cart-txt"><img src="./assets/add-cart.svg" alt="add cart"></label>
+    <input type="checkbox" class="add-like-btn">
+    <label class="add-like-txt"><img src="./assets/add-like.svg" alt="add like"></label>
+    
+    <div class="card-image">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_900385-MLA71884624867_092023-W.webp" alt="zapatilla generica">
+    </div>
+    <div class="card-info">
+        <h3 class="card-info-tittle">Zapatilla X</h3>
+        <p class="card-info-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero, illo laboriosam ea, soluta porro architecto doloribus, explicabo vitae eos facilis dolores similique molestiae nobis quam quia veritatis provident iure.</p>
+        <p class="card-info-price">30,000</p>
+    </div>
+</section>

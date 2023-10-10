@@ -7,12 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
-
-
-
 <body>
     <section class="slides-container">
         <article id="general-section" class="slide">
@@ -34,7 +31,7 @@
             </nav>
             <header>
                 <div class="brand-img-box">
-                    <img class="brand-img" src="/assets/logo-shoes.svg" alt="Logo de Marca">
+                    <img class="brand-img" src="./assets/logo-shoes.svg" alt="Logo de Marca">
                 </div>
                 <section class="brand-box">
                     <div class="slogan-box">
@@ -49,36 +46,60 @@
                     "Pisando tendencias, StepUp Sneaks te guía." -->
                 </section>
                 <section class="access-box">
-                    <a href="#"><img src="/assets/search.svg" alt="" class="search-logo"></a>
-                    <a href="#"><img src="/assets/like.svg" alt="" class="like-logo"></a>
-                    <a href="#"><img src="/assets/cart.svg" alt="" class="cart-logo"></a>
-                    <a href="#"><img src="/assets/profile.svg" alt="" class="profile-logo"></a>
+                    <a href="#"><img src="./assets/search.svg" alt="" class="search-logo"></a>
+                    <a href="#"><img src="./assets/like.svg" alt="" class="like-logo"></a>
+                    <a href="#"><img src="./assets/cart.svg" alt="" class="cart-logo"></a>
+                    <a href="#"><img src="./assets/profile.svg" alt="" class="profile-logo"></a>
                 </section>
             </header>
         </article>
-        <article id="men-section" class="slide men-slide">
-            <section class= "card-container">
-                <div class="card-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_900385-MLA71884624867_092023-W.webp" alt="zapatilla generica">
+        <article id="men-section" class="slide">
+            <section class="slide-products-section">
+                <div class="men-section-previous-slide-container"> 
+                    <img src="./assets/next.svg" alt="Next Page" class="men-section-previous-slide">
                 </div>
-                <div class="card-info">
-                    <h3 class="card-info-tittle">Zapatilla X</h3>
-                    <p class="card-info-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero, illo laboriosam ea, soluta porro architecto doloribus, explicabo vitae eos facilis dolores similique molestiae nobis quam quia veritatis provident iure.</p>
-                    <p class="card-info-price">30,000</p>
+
+                <div class="men-slide">            
+                </div>
+
+                <div class="men-section-next-slide-container">
+                    <img src="./assets/next.svg" alt="Previous Page" class="men-section-next-slide">
                 </div>
             </section>
         </article>
         <article id="women-section" class="slide">
-            <h2>Slide Mujeres</h2>
+            <section class="slide-products-section">
+                <div class="women-section-previous-slide-container"> 
+                    <img src="./assets/next.svg" alt="Next Page" class="women-section-previous-slide">
+                </div>
+
+                <div class="women-slide">            
+                </div>
+
+                <div class="women-section-next-slide-container">
+                    <img src="./assets/next.svg" alt="Previous Page" class="women-section-next-slide">
+                </div>
+            </section>
         </article>
         <article id="kid-section"class="slide">
-            <h2>Slide Niños</h2>
+            <section class="slide-products-section">
+                <div class="kids-section-previous-slide-container"> 
+                    <img src="./assets/next.svg" alt="Next Page" class="kids-section-previous-slide">
+                </div>
+
+                <div class="kids-slide">            
+                </div>
+
+                <div class="kids-section-next-slide-container">
+                    <img src="./assets/next.svg" alt="Previous Page" class="kids-section-next-slide">
+                </div>
+            </section>
         </article>
     </section>
 
     <div>
         <input type="checkbox" class="modal-help-button" />
-        <label class="modal-help-txt"><img src="/assets/help.svg" alt=""></label>
+        <label class="modal-help-txt"><img src="./assets/help.svg" alt=""></label>
         <footer class="help-menu">
             <section class="form-container">
                 <h2>Formulario de Consulta</h2>
@@ -94,7 +115,10 @@
             </section>
         </footer>
     </div> 
-
-    <script src="js/scripts.js"></script>
+ 
+<!--     <script src="./js/scripts.js"></script> -->
+    <script type="module" src="./js/cards-Controllers/men-cards-controller.js"></script>
+    <script type="module" src="./js/cards-Controllers/women-cards-controller.js"></script>
+    <script type="module" src="./js/cards-Controllers/kids-cards-controller.js"></script>
 </body>
 </html>
