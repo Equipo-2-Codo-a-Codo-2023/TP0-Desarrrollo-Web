@@ -42,7 +42,7 @@ async function fetchData() {
         const datosDolar = document.getElementById('dolarHoy');
 
         //Se incorpora el valor de compra del dolar blue y la ultima fecha de actualizacion a la seccion correspondiente en el nav
-        datosDolar.innerHTML=`Cotizacion Dolar Blue: $${compraBlue} (Actualizado el ${fechaHoraFormateada})`;
+        datosDolar.innerHTML=`Cotizacion Dolar Blue: $${compraBlue} (${fechaHoraFormateada})`;
       })
       .catch((error) => {
         console.error('Error:', error);
