@@ -1,7 +1,6 @@
-import {kidsInformation} from "../../temporary-data-base/kids-products.js"
-import {cardConstructor, cleanElementsOf , numberCardsForPage} from "./card-constructor.js"
+import {kidsInformation} from "../../temporary-data-base/kids-products.js" 
+import {cardConstructor, cleanElementsOf,refreshNumberCardsForPage} from "./card-constructor.js"
 
- 
 //Elekidstos del DOM
 
 let kidsSlide = document.querySelector(".kids-slide")
@@ -10,6 +9,7 @@ let nextkidsSlide = document.querySelector(".kids-section-next-slide-container")
 
 //Variables para Paginado
 
+let numberCardsForPage = refreshNumberCardsForPage()
 let totalPages = Math.floor(kidsInformation.length/numberCardsForPage) 
 let actualPage = 0
 
@@ -30,6 +30,14 @@ function addCards(pageNumber){
 
 //--------- Primera Carga ----------
 document.addEventListener('DOMContentLoaded', addCards(actualPage))
+
+// Esta atento a cambios de viewporrt, actualiza y renderiza las cards correspondientes
+
+window.addEventListener('resize', () => {
+    numberCardsForPage = refreshNumberCardsForPage()
+    cleanElementsOf(kidsSlide)
+    addCards(actualPage)
+})
 
 //---------Cambios de Pagina --------
 

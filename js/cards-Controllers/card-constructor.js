@@ -1,3 +1,7 @@
+// import {precioDolar} from "path" 
+
+let precioDolarProvisorio = 1
+
 export function cardConstructor(obj) {
     // Crear la section "card-container"
     let cardContainer = document.createElement("section");
@@ -55,7 +59,7 @@ export function cardConstructor(obj) {
 
     let cardPrice = document.createElement("p");
     cardPrice.className = "card-info-price";
-    cardPrice.textContent = obj.price;
+    cardPrice.textContent = (obj.price/precioDolarProvisorio).toFixed(2);
   
     cardInfoDiv.appendChild(cardTitle);
     cardInfoDiv.appendChild(cardDescription);
@@ -78,6 +82,17 @@ export function cleanElementsOf(element){
     }
 }
 
-//Guardo esta variable general aqui para centralizarla en los distintos modulos
+//Funcion para actualizar el numero de cards por slide segun el tamaño del viewport
 
-export  let numberCardsForPage = 8  //posteriormente este valor debe variar segun el tamaño del viewport 
+export function refreshNumberCardsForPage(){
+    let viewportWidth = window.innerWidth
+    let numberCards=0
+
+    if (viewportWidth < 767) numberCards = 4;
+    if (viewportWidth >= 767 && viewportWidth < 1023) numberCards = 6;
+    if (viewportWidth >= 1023  && viewportWidth < 1199) numberCards = 8;
+    if (viewportWidth >= 1199) numberCards = 10;
+
+    return numberCards
+}
+
