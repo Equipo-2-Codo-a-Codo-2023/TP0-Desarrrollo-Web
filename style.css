@@ -18,6 +18,36 @@ html {
   display: none;
 }
 
+/* ------------ Media Queries ---------------- */
+
+/* Ppantallas pequeñas (teléfonos móviles) */
+
+@media (max-width: 767px) {
+  .access-box {
+    width: 30vw;
+  }
+}
+
+/* Tipo tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Pantallas de escritorio estándar */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .category-link {
+    font-size: 30px;
+  }
+}
+
+/* Pantallas más grandes */
+@media (min-width: 1200px) {
+  .category-link {
+    font-size: 30px;
+  }
+}
+
+/* ------------------------------------------ */
+
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -123,7 +153,35 @@ p {
 .nav-container li {
   font-size: 1.15rem;
   display: inline-block;
-  /*border: thin solid rgb(0, 0, 0);*/
+}
+
+.slogan-container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center ;
+  position: absolute;
+  top: 20vw;
+  left:20vw;
+  width: 60vw;
+  height: 20vw;
+  background-color: #000a2395;
+  border-radius: 2vw;
+}
+
+.slogan-text{
+  color: #FFF;
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+.slogan-text:first-child{
+  align-self: flex-start;
+  margin-left: 2rem;
+}
+.slogan-text:last-child{
+  align-self: flex-end ;
+  margin-right: 2rem;
 }
 
 .slides-container {
@@ -422,30 +480,3 @@ p {
 
 /*------------- END Cards Styles-----------------*/
 
-/* ------------ Media Queries ---------------- */
-
-/* Ppantallas pequeñas (teléfonos móviles) */
-
-@media (max-width: 767px) {
-  .access-box {
-    width: 30vw;
-  }
-}
-
-/* Tipo tabletas */
-@media (min-width: 768px) and (max-width: 1023px) {
-}
-
-/* Pantallas de escritorio estándar */
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .category-link {
-    font-size: 30px;
-  }
-}
-
-/* Pantallas más grandes */
-@media (min-width: 1200px) {
-  .category-link {
-    font-size: 30px;
-  }
-}
