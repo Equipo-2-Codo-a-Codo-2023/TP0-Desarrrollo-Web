@@ -1,3 +1,4 @@
+let moneda='ARS';
 //API Request para la cotizacion del dolar a la fecha mas reciente
 async function fetchData() {
     const url = 'https://api.bluelytics.com.ar/v2/latest';
@@ -18,6 +19,7 @@ async function fetchData() {
     //Llamado a la API para obtener la cotizacion del dolar blue
     const data= fetchData();
     //Seleccion de los datos relevantes que proporciona la API
+    moneda='ARS';
     data.then((resultado) => {
 
         const blue = resultado.blue;
@@ -49,8 +51,32 @@ async function fetchData() {
       });
   });
 
+ 
+  var seleccionARS = document.getElementById("cambiarARS");
+
+  // Agrega un event listener para el evento click
+  seleccionARS.addEventListener("click", function(event) {
+      // Evita que el enlace se comporte como un enlace normal (navegando a la URL)
+      event.preventDefault();
+      if (moneda!='ARS') {moneda='ARS'}
+      // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
+      console.log("Moneda Cambiada a {$moneda}");
+  });
+
+  var seleccionUSD = document.getElementById("cambiarUSD");
+
+  // Agrega un event listener para el evento click
+  seleccionUSD.addEventListener("click", function(event) {
+      // Evita que el enlace se comporte como un enlace normal (navegando a la URL)
+      event.preventDefault();
+      if (moneda!='USD') {moneda='USD'}
+      // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
+      console.log("Moneda Cambiada a {$moneda}");
+  });
+  
   
 
+  
 //Clase Producto para tener productos hardcoded y simular la base de datos
 //Product tiene los siguentes campos: nombre (string), descripcion(string), precio(number), imagen(string)
 //Nota: imagen es el nombre de la imagen.jpg esto luego debera referirse cuando se utilice de forma visual en las cards para obtener la ruta completa de la imagen

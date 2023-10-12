@@ -70,7 +70,7 @@ header {
   font-size: 5.5vw;
   font-style: italic;
   text-align: center;
-  letter-spacing: .5rem;
+  /*letter-spacing: .5rem;*/
   width: inherit;
   max-height: inherit;
 }
@@ -78,7 +78,7 @@ header {
 .category-link {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.01rem;
-  font-size: 3vw;
+  /*font-size: 3vw;*/
   font-style: italic;
   color: white;
 }
@@ -132,8 +132,8 @@ p {
   align-items: center ;
   position: absolute;
   top: 20vw;
-  left:20vw;
-  width: 60vw;
+  left:27vw;
+  width: 45vw;
   height: 20vw;
   background-color: #000a2395;
   border-radius: 2vw;
@@ -142,8 +142,9 @@ p {
 .slogan-text{
   color: #FFF;
   font-size: 3.5rem;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-style: italic;
+  font-family: "Bebas Neue", sans-serif;
 }
 .slogan-text:first-child{
   align-self: flex-start;
@@ -458,6 +459,49 @@ p {
 
 /*------------- END Cards Styles-----------------*/
 
+
+/*-------------- Menu Dropdown para elegir USD o ARS -----*/
+.dropbtn {
+  background-color: rgb(0, 4, 14);
+  color: white;
+  border: none;
+  height: 1.7rem;
+  font-family: "Bebas Neue", Arial, Helvetica;
+  font-style: italic;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dropdown {
+  float: fixed;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+  z-index: 100;
+  top: 100%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.dropdown:hover .dropbtn {background-color: rgb(0, 4, 14);}
 /* ------------ Media Queries ---------------- */
 
 /* Ppantallas pequeñas (teléfonos móviles) */
