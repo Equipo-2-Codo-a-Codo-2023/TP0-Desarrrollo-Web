@@ -1,4 +1,4 @@
-var moneda='ARS';
+let moneda='ARS';
 //API Request para la cotizacion del dolar a la fecha mas reciente
 async function fetchData() {
     const url = 'https://api.bluelytics.com.ar/v2/latest';
