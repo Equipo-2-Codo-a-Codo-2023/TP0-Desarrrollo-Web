@@ -35,7 +35,7 @@ header {
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   overflow: hidden;
   width: 100vw;
@@ -46,77 +46,50 @@ header {
 .brand-box {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  width: 80vw;
-  height: 100vh;
-  max-height: 100vh;
+  width: 50vw;
+  max-height: 10vw;
 }
 
 .brand-img {
-  width: 18vw;
+  width: 20vw;
   height: inherit;
-  max-height: 18vh;
+  max-height: 10vw;
 }
 
 .brand-img-box {
   float: left;
 }
-.slogan-box {
-  display: flex;
-  width: 40vw;
-  height: inherit;
-  max-height: 20vh;
-  flex-flow: column nowrap;
-  justify-content: center;
-}
 
-.brand-slogan1 {
-  color: #fff;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.5vw;
-  font-style: italic;
-  letter-spacing: 0.1rem;
-}
-.brand-slogan2,
+
 .brand-text {
+  display: block;
   color: #fff;
   font-family: "Bebas Neue", sans-serif;
-  line-height: 95%;
-  font-size: 3vw;
+  font-size: 5.5vw;
   font-style: italic;
-  letter-spacing: 0.1rem;
-  padding-left: 35%;
+  text-align: center;
+  letter-spacing: .5rem;
+  width: inherit;
+  max-height: inherit;
 }
 
 .category-link {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.01rem;
-  font-size: 1.6rem;
+  font-size: 3vw;
   font-style: italic;
   color: white;
 }
 
-.brand-slogan1 {
-  align-self: flex-start;
-}
-.brand-slogan2 {
-  align-self: flex-end;
-}
-.brand-text {
-  /*font-size: 4.5vw;*/
-  font-size: 9vh;
-  text-align: center;
-  width: 20vw;
-  max-height: 20vh;
-}
 
 .access-box {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  width: 20vw;
+  width: 25vw;
   height: inherit;
   max-height: 20vh;
   padding-bottom: 2vw;
@@ -127,8 +100,8 @@ p {
 }
 
 .access-box img {
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 2vw;
+  height: 2vw;
   min-width: 3rem;
 }
 
@@ -448,3 +421,31 @@ p {
 }
 
 /*------------- END Cards Styles-----------------*/
+
+/* ------------ Media Queries ---------------- */
+
+/* Ppantallas pequeñas (teléfonos móviles) */
+
+@media (max-width: 767px) {
+  .access-box {
+    width: 30vw;
+  }
+}
+
+/* Tipo tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Pantallas de escritorio estándar */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .category-link {
+    font-size: 30px;
+  }
+}
+
+/* Pantallas más grandes */
+@media (min-width: 1200px) {
+  .category-link {
+    font-size: 30px;
+  }
+}
