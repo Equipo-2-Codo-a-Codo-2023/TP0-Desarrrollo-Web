@@ -80,4 +80,4 @@ export function cleanElementsOf(element){
 
 //Guardo esta variable general aqui para centralizarla en los distintos modulos
 
-export  let numberCardsForPage = 8  //posteriormente este valor debe variar segun el tamaño del viewport 
+export  let numberCardsForPage = 10 //posteriormente este valor debe variar segun el tamaño del viewport 
