@@ -280,15 +280,16 @@ p {
   background: linear-gradient(180deg, #00040e, #000a23);
   border: medium solid lightblue;
   border-radius: 5%;
-  width: 80%;
-  height: 60vh;
+  width: 90%;
+  height: 68vh;
 }
 
 .contact-form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: left;
+  padding-left:2rem;
   width: 100%;
 }
 
@@ -299,7 +300,7 @@ p {
 }
 
 .contact-form > *::placeholder {
-  color: lightgrey;
+  color: rgb(87, 87, 87);
 }
 
 .contact-form > *[required]:invalid {
@@ -321,6 +322,8 @@ p {
 .contact-form input[type="submit"] {
   width: 20%;
   font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
   color: #000;
 }
 .form-container h4 {
@@ -597,3 +600,46 @@ p {
 .card-info-price {
   font-size: 100%;;
 } */
+
+.form-container h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.5vw;
+  font-style: italic;
+  letter-spacing: 0.09rem;
+}
+.infoDolar{
+  z-index: 100;
+  display: flex;
+  position: fixed;
+  background-color: rgb(0, 8, 28);
+  bottom:0vw;
+  right:0vw;
+}
+
+.btnEnviar{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container h4{
+  font-family: system-ui;
+  font-size: 1vw;
+  font-style: italic;
+  letter-spacing: 0.09rem;
+}
+
+.mapa{
+  position:fixed;
+  top:16vw;
+  right:7vw;
+}
+
+#closeBtn{
+  display: flex;
+  position:fixed;
+  right:10vw;
+  top:10vw;
+}

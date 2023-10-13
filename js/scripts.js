@@ -14,6 +14,7 @@ async function fetchData() {
     }
   }
 
+
   //Cuando se carga el HTML se ejecuta la request de la cotizacion del dolar
   document.addEventListener('DOMContentLoaded', function() {
     //Llamado a la API para obtener la cotizacion del dolar blue
@@ -44,14 +45,19 @@ async function fetchData() {
         const datosDolar = document.getElementById('dolarHoy');
 
         //Se incorpora el valor de compra del dolar blue y la ultima fecha de actualizacion a la seccion correspondiente en el nav
-        datosDolar.innerHTML=`Cotizacion Dolar Blue: $${compraBlue} (${fechaHoraFormateada})`;
+        datosDolar.innerHTML=`Dolar Blue: $${compraBlue} (${fechaHoraFormateada})`;
       })
       .catch((error) => {
         console.error('Error:', error);
       });
   });
-
- 
+  
+  const closeBtn = document.getElementById('closeBtn');
+  const helpCheckbox = document.getElementById('botonHelp');
+  
+  closeBtn.addEventListener('click', () => {
+    helpCheckbox.checked = false;
+  });
   var seleccionARS = document.getElementById("cambiarARS");
 
   // Agrega un event listener para el evento click

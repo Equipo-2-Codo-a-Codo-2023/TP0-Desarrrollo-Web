@@ -40,9 +40,6 @@
                     <li>
                         <a href="#kid-section" class="category-link">Kids</a>
                     </li>
-                    <li>
-                        <a href="https://dolarhoy.com/" target="_blank" id="dolarHoy" class="category-link">Cotizacion Dolar: </a>
-                    </li>
                 </ul>
             </nav>
             <header>
@@ -115,21 +112,31 @@
             </section>
         </article>
     </section>
+    <button class="infoDolar">
+        <a href="https://dolarhoy.com/" target="_blank" id="dolarHoy" class="category-link">Cotizacion Dolar: </a>
+    </button>
     <div>
-        <input type="checkbox" class="modal-help-button" />
+        <input type="checkbox"  id="botonHelp" class="modal-help-button" />
         <label class="modal-help-txt"><img src="./assets/help.svg" alt=""></label>
         <footer class="help-menu">
+            <a href id="closeBtn"><img src="resources/close.png"></a>
             <section class="form-container">
-                <h2>Formulario de Consulta</h2>
+                <h2>Contáctanos</h2>
                 <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
                     <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
                     title="Nombre sólo acepta letras y espacios en blanco" required>
                     <input type="email" name="correo" placeholder="Escribe tu correo" pattern="\w+@\w+\.\w+"
                     title="Formato de correo inválido" required>
-                    <textarea name="comentarios" placeholder="Escribe tus consulta" cols="30" rows="10" required></textarea>
-                    <input type="submit">
+                    <textarea name="comentarios" placeholder="Escribe tu consulta" cols="30" rows="10" required></textarea>
+                    <div class="btnEnviar">
+                    <input type="submit" value="Enviar"> 
+                    </div>  
                 </form>
-                <h4>Para salir del formulario hacer click en "?"</h4>
+                <div class="mapa">
+                <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.1049050430962!2d-68.32516700767836!3d-54.814600184058044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22b5bad109bf%3A0x5498473dba43ebfc!2sUshuaia%2C%20Tierra%20del%20Fuego%20Province!5e0!3m2!1sen!2sar!4v1697160409089!5m2!1sen!2sar"   width="400"
+                height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+                <h4>Encontranos en Tierra del Fuego - Usuahia - Calle1 NroX</h4>
+            </div>
             </section>
         </footer>
     </div> 
