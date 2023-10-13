@@ -1,5 +1,5 @@
 let valorDolar=2;
-let precioMoneda=1;
+let precioMoneda=localStorage.getItem('precioMoneda') || 1;
 
 //API Request para la cotizacion del dolar a la fecha mas reciente
 async function fetchData() {
@@ -68,10 +68,12 @@ async function fetchData() {
 
   function actualizarPrecioMoneda(precioNuevo) {
     precioMoneda = precioNuevo;
+    localStorage.setItem('precioMoneda', precioMoneda);
     console.log('El precio de la moneda se ha actualizado a:', precioMoneda);
   }
 
-  //-------------SELECTOR DE PRECIOS------------
+  //-------------SELECTOR DE PRECIOS------------  
+  
   const seleccionARS = document.getElementById('cambiarARS');
  
   // Agrega un event listener para el evento click
@@ -83,7 +85,7 @@ async function fetchData() {
         actualizarPrecioMoneda(1);}
       // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
       console.log("Moneda Cambiada a ARS: ", precioMoneda);
-      //ocation.reload();
+      location.reload();
   });
 
   const seleccionUSD = document.getElementById('cambiarUSD');
@@ -95,7 +97,7 @@ async function fetchData() {
         actualizarPrecioMoneda(valorDolar);}
       // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
       console.log("Moneda Cambiada a USD: ", precioMoneda);
-      //location.reload();
+      location.reload();
   });
 
   export var precioMoneda2=precioMoneda;
