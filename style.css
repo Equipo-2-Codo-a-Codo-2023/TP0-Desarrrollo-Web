@@ -476,11 +476,12 @@ p {
   justify-content: space-evenly;
   align-items: center;
 }
-
-.dropdown {
+ /* impide que se centre dentro del nav */
+ 
+/* .dropdown {
   float: fixed;
   overflow: hidden;
-}
+} */
 
 .dropdown-content {
   display: none;
@@ -519,10 +520,10 @@ p {
     min-height: 45%;
   }
   .card-info-description {
-    font-size: 14px;
+    font-size: 12px;
   }
   .card-info-price {
-    font-size: 18px;
+    font-size: 17px;
   }
   
 }
