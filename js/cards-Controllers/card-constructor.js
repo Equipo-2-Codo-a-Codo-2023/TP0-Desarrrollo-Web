@@ -1,7 +1,7 @@
-//import {obtenerPrecioMoneda} from '../scripts.js';
+import {precioMoneda2} from '../scripts.js';
 
-//console.log(" precio moneda: ",obtenerPrecioMoneda);
-let precioDolarProvisorio = 1
+console.log("precio Moneda de card-constructor : ",precioMoneda2);
+let precioDolarProvisorio = precioMoneda2
 
 export function cardConstructor(obj) {
     // Crear la section "card-container"

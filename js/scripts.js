@@ -30,8 +30,8 @@ async function fetchData() {
 
         valorDolar=compraBlue;
         console.log("CARGA API"); 
-        console.log("valoDolar: ",valorDolar);
-        console.log("precioMoneda: ",precioMoneda);
+        console.log("valoDolar al iniciar API: ",valorDolar);
+        console.log("precioMoneda al iniciar API: ",precioMoneda);
         //Parsear la fecha de actualizacion a formato visual correcto
     
         const fechaHoraObjeto = new Date(last_update);
@@ -66,6 +66,10 @@ async function fetchData() {
     helpCheckbox.checked = false;
   });
 
+  function actualizarPrecioMoneda(precioNuevo) {
+    precioMoneda = precioNuevo;
+    console.log('El precio de la moneda se ha actualizado a:', precioMoneda);
+  }
 
   //-------------SELECTOR DE PRECIOS------------
   const seleccionARS = document.getElementById('cambiarARS');
@@ -74,10 +78,12 @@ async function fetchData() {
   seleccionARS.addEventListener('click', function(event){
       // Evita que el enlace se comporte como un enlace normal (navegando a la URL)
       event.preventDefault();
-      if (precioMoneda!==1) {precioMoneda=1;}
+      if (precioMoneda!==1) {
+        //precioMoneda=1;
+        actualizarPrecioMoneda(1);}
       // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
       console.log("Moneda Cambiada a ARS: ", precioMoneda);
-      location.reload();
+      //ocation.reload();
   });
 
   const seleccionUSD = document.getElementById('cambiarUSD');
@@ -85,11 +91,12 @@ async function fetchData() {
   seleccionUSD.addEventListener('click', function(event) {
       // Evita que el enlace se comporte como un enlace normal (navegando a la URL)
       event.preventDefault();
-      if (precioMoneda!=valorDolar) { precioMoneda=valorDolar;}
+      if (precioMoneda!=valorDolar) { //precioMoneda=valorDolar;
+        actualizarPrecioMoneda(valorDolar);}
       // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
       console.log("Moneda Cambiada a USD: ", precioMoneda);
-      location.reload();
+      //location.reload();
   });
 
-
+  export var precioMoneda2=precioMoneda;
   console.log("Precio en scripts.js: ", precioMoneda);
