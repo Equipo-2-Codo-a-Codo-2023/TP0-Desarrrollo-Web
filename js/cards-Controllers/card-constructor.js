@@ -1,5 +1,6 @@
-// import {precioDolar} from "path" 
+//import {obtenerPrecioMoneda} from '../scripts.js';
 
+//console.log(" precio moneda: ",obtenerPrecioMoneda);
 let precioDolarProvisorio = 1
 
 export function cardConstructor(obj) {

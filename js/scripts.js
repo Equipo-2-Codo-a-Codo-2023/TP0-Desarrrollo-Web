@@ -1,4 +1,6 @@
-let moneda='ARS';
+var valorDolar=2;
+var precioMoneda=1;
+
 //API Request para la cotizacion del dolar a la fecha mas reciente
 async function fetchData() {
     const url = 'https://api.bluelytics.com.ar/v2/latest';
@@ -9,8 +11,8 @@ async function fetchData() {
       return data;
     } catch (error) {
       const data= '';
-      return data;
       console.error(error);
+      return data;
     }
   }
 
@@ -20,15 +22,18 @@ async function fetchData() {
     //Llamado a la API para obtener la cotizacion del dolar blue
     const data= fetchData();
     //Seleccion de los datos relevantes que proporciona la API
-    moneda='ARS';
     data.then((resultado) => {
 
         const blue = resultado.blue;
         const last_update = resultado.last_update;
         const compraBlue = blue.value_buy;
 
+        valorDolar=compraBlue;
+        console.log("Se ha asignado  valorDolar=compraBlue");
+        console.log("valoDolar: ",valorDolar);
+        console.log("precioMoneda: ",precioMoneda);
         //Parsear la fecha de actualizacion a formato visual correcto
-
+    
         const fechaHoraObjeto = new Date(last_update);
 
         // Formatear la fecha y hora en otro formato
@@ -52,55 +57,39 @@ async function fetchData() {
       });
   });
   
+
+  //Botón de cerrar el form
   const closeBtn = document.getElementById('closeBtn');
   const helpCheckbox = document.getElementById('botonHelp');
   
   closeBtn.addEventListener('click', () => {
     helpCheckbox.checked = false;
   });
-  var seleccionARS = document.getElementById("cambiarARS");
 
+
+  //-------------SELECTOR DE PRECIOS------------
+  let seleccionARS = document.getElementById('cambiarARS');
+  let seleccionUSD = document.getElementById('cambiarUSD');
+  
   // Agrega un event listener para el evento click
-  seleccionARS.addEventListener("click", function(event) {
+  seleccionARS.addEventListener('click', function(){
       // Evita que el enlace se comporte como un enlace normal (navegando a la URL)
-      event.preventDefault();
-      if (moneda!='ARS') {moneda='ARS'}
+      //event.preventDefault();
+      if (precioMoneda!=1) {precioMoneda=1;}
       // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
-      console.log("Moneda Cambiada a {$moneda}");
+      console.log("Moneda Cambiada a ARS: ", precioMoneda);
+     // location.reload();
   });
 
-  var seleccionUSD = document.getElementById("cambiarUSD");
-
   // Agrega un event listener para el evento click
-  seleccionUSD.addEventListener("click", function(event) {
+  seleccionUSD.addEventListener('click', function() {
       // Evita que el enlace se comporte como un enlace normal (navegando a la URL)
-      event.preventDefault();
-      if (moneda!='USD') {moneda='USD'}
+      //event.preventDefault();
+      if (precioMoneda=1) { precioMoneda=valorDolar;}
       // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
-      console.log("Moneda Cambiada a {$moneda}");
+      console.log("Moneda Cambiada a USD: ", precioMoneda);
+      //location.reload();
   });
-  
-  
 
-  
-//Clase Producto para tener productos hardcoded y simular la base de datos
-//Product tiene los siguentes campos: nombre (string), descripcion(string), precio(number), imagen(string)
-//Nota: imagen es el nombre de la imagen.jpg esto luego debera referirse cuando se utilice de forma visual en las cards para obtener la ruta completa de la imagen
-class Product{
-    constructor(nombre,descripcion,precio,imagen){
-        this.nombre=nombre;
-        this.descripcion=descripcion;
-        this.precio=precio;
-        this.imagen=imagen;
-    }
-}
 
-//Metodo que carga 4 productos predefinidos en un array
-function PreLoadData(){
-    const product1 = new Product("Product 1", "Description 1", 29.99, "nike_air.jpg");
-    const product2 = new Product("Product 2", "Description 2", 39.99, "nike.jpg");
-    const product3 = new Product("Product 3", "Description 3", 39.99, "vans.jpg");
-    const product4 = new Product("Product 4", "Description 4", 39.99, "yellow.jpg");
-    const productArray = [product1, product2,product3,product4];
-    return productArray;
-}
+  console.log("Precio en scripts.js: ", precioMoneda);
