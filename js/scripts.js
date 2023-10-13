@@ -1,5 +1,5 @@
-var valorDolar=2;
-var precioMoneda=1;
+let valorDolar=2;
+let precioMoneda=1;
 
 //API Request para la cotizacion del dolar a la fecha mas reciente
 async function fetchData() {
@@ -29,7 +29,7 @@ async function fetchData() {
         const compraBlue = blue.value_buy;
 
         valorDolar=compraBlue;
-        console.log("Se ha asignado  valorDolar=compraBlue");
+        console.log("CARGA API"); 
         console.log("valoDolar: ",valorDolar);
         console.log("precioMoneda: ",precioMoneda);
         //Parsear la fecha de actualizacion a formato visual correcto
@@ -68,27 +68,27 @@ async function fetchData() {
 
 
   //-------------SELECTOR DE PRECIOS------------
-  let seleccionARS = document.getElementById('cambiarARS');
-  let seleccionUSD = document.getElementById('cambiarUSD');
-  
+  const seleccionARS = document.getElementById('cambiarARS');
+ 
   // Agrega un event listener para el evento click
-  seleccionARS.addEventListener('click', function(){
+  seleccionARS.addEventListener('click', function(event){
       // Evita que el enlace se comporte como un enlace normal (navegando a la URL)
-      //event.preventDefault();
-      if (precioMoneda!=1) {precioMoneda=1;}
+      event.preventDefault();
+      if (precioMoneda!==1) {precioMoneda=1;}
       // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
       console.log("Moneda Cambiada a ARS: ", precioMoneda);
-     // location.reload();
+      location.reload();
   });
 
+  const seleccionUSD = document.getElementById('cambiarUSD');
   // Agrega un event listener para el evento click
-  seleccionUSD.addEventListener('click', function() {
+  seleccionUSD.addEventListener('click', function(event) {
       // Evita que el enlace se comporte como un enlace normal (navegando a la URL)
-      //event.preventDefault();
-      if (precioMoneda=1) { precioMoneda=valorDolar;}
+      event.preventDefault();
+      if (precioMoneda!=valorDolar) { precioMoneda=valorDolar;}
       // Aquí puedes realizar acciones adicionales cuando el enlace es clickeado
       console.log("Moneda Cambiada a USD: ", precioMoneda);
-      //location.reload();
+      location.reload();
   });
 
 
