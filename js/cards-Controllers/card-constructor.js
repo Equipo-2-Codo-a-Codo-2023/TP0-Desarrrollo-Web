@@ -1,6 +1,6 @@
-// import {precioDolar} from "path" 
+import {precioMoneda2} from '../scripts.js';
 
-let precioDolarProvisorio = 1
+console.log("precio Moneda de card-constructor : ",precioMoneda2);
 
 export function cardConstructor(obj) {
     // Crear la section "card-container"
@@ -59,7 +59,7 @@ export function cardConstructor(obj) {
 
     let cardPrice = document.createElement("p");
     cardPrice.className = "card-info-price";
-    cardPrice.textContent = (obj.price/precioDolarProvisorio).toFixed(2);
+    cardPrice.textContent = (obj.price/precioMoneda2).toFixed(2);
   
     cardInfoDiv.appendChild(cardTitle);
     cardInfoDiv.appendChild(cardDescription);
