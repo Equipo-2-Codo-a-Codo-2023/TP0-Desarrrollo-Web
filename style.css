@@ -644,3 +644,59 @@ p {
   right:10vw;
   top:10vw;
 }
+
+
+/*CSS
+--Animacion de los botones del menu
+*/
+.nav-container li a:hover{
+  color: gray;
+  text-decoration: underline;
+}
+
+.dropdown button:hover{
+  color: gray;
+  text-decoration: underline;
+}
+
+/*Footer*/
+
+footer {
+  background-color: #00040e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  height: 1200px;
+}
+
+.footer_copy{
+font-size: 12px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-categories {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-categories li {
+  margin: 0 10px; 
+}
+
+.footer-categories a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-categories a:hover {
+  color: gray;
+}
