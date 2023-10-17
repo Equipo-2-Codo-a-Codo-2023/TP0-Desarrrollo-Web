@@ -616,6 +616,9 @@ p {
   bottom:0vw;
   right:0vw;
 }
+.dolar-btn-style{
+  font-size: 1.5vw;
+}
 
 .btnEnviar{
   font-family: "Bebas Neue", sans-serif;
@@ -661,13 +664,21 @@ p {
 
 /*Footer*/
 
-footer {
+.slide-footer{
+  background-color: #00040e !important ; 
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  height: 10vh;
+}
+
+/* footer {
   background-color: #00040e;
   color: #fff;
   text-align: center;
   padding: 20px 0;
   height: 1200px;
-}
+} */
 
 .footer_copy{
 font-size: 12px;
