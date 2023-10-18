@@ -139,6 +139,9 @@ p {
   height: 20vw;
   background-color: #000a2395;
   border-radius: 2vw;
+  color: white;
+  animation: zoomIn; 
+  animation-duration: 1s; 
 }
 
 .slogan-text{
@@ -148,6 +151,7 @@ p {
   font-style: italic;
   font-family: "Bebas Neue", sans-serif;
 }
+
 .slogan-text:first-child{
   align-self: flex-start;
   margin-left: 2rem;
