@@ -126,6 +126,8 @@ p {
 }
 
 .slogan-container{
+  box-sizing: content-box;
+  padding: 1%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -652,9 +654,43 @@ p {
 /*CSS
 --Animacion de los botones del menu
 */
-.nav-container li a:hover{
+/* .nav-container li a:hover{
   color: gray;
   text-decoration: underline;
+} */
+
+.position-relative{
+  position: relative;
+}
+.anim-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.25rem;
+  background-color: gray;
+  transition: width 0.3s ease-in-out
+}
+
+.anim-bottom:hover::after {
+  width: 100%;
+}
+
+@keyframes anim-slogan {
+  0% {
+  }
+  50% {    
+    background-color: #000a23;
+    transform: scale(1.02);
+  }
+  100% {
+  }
+}
+
+
+.slogan-container:hover {
+  animation: anim-slogan 2s linear ;
 }
 
 .dropdown button:hover{
