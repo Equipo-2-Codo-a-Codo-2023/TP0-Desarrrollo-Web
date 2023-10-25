@@ -23,9 +23,9 @@ body {
   flex-flow: column nowrap;
 }
 
-.fixed-image{
+.fixed-image {
   position: fixed;
-  filter: blur(.2rem);
+  filter: blur(0.2rem);
   z-index: -1;
   width: 100vw;
   height: 100%;
@@ -62,7 +62,6 @@ header {
   float: left;
 }
 
-
 .brand-text {
   display: block;
   color: #fff;
@@ -82,7 +81,6 @@ header {
   font-style: italic;
   color: white;
 }
-
 
 .access-box {
   display: flex;
@@ -125,39 +123,39 @@ p {
   display: inline-block;
 }
 
-.slogan-container{
+.slogan-container {
   box-sizing: content-box;
   padding: 1%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   position: absolute;
   top: 20vw;
-  left:27vw;
+  left: 27vw;
   width: 45vw;
   height: 20vw;
   background-color: #000a2395;
   border-radius: 2vw;
   color: white;
-  animation: zoomIn; 
-  animation-duration: 1s; 
+  animation: zoomIn;
+  animation-duration: 1s;
 }
 
-.slogan-text{
-  color: #FFF;
+.slogan-text {
+  color: #fff;
   font-size: 3.5rem;
   /*font-weight: bold;*/
   font-style: italic;
   font-family: "Bebas Neue", sans-serif;
 }
 
-.slogan-text:first-child{
+.slogan-text:first-child {
   align-self: flex-start;
   margin-left: 2rem;
 }
-.slogan-text:last-child{
-  align-self: flex-end ;
+.slogan-text:last-child {
+  align-self: flex-end;
   margin-right: 2rem;
 }
 
@@ -174,11 +172,9 @@ p {
   position: relative;
   width: 100vw;
   height: inherit;
-  border-bottom: medium solid #FFF5;
+  border-bottom: medium solid #fff5;
   scroll-snap-align: center;
 }
-
-
 
 .slide-products-section {
   display: flex;
@@ -218,7 +214,7 @@ p {
 
 .men-section-previous-slide,
 .women-section-previous-slide,
-.kids-section-previous-slide{
+.kids-section-previous-slide {
   rotate: 180deg;
 }
 
@@ -227,7 +223,7 @@ p {
 .women-section-next-slide-container:hover,
 .women-section-previous-slide-container:hover,
 .kids-section-next-slide-container:hover,
-.kids-section-previous-slide-container:hover{
+.kids-section-previous-slide-container:hover {
   background-color: darkgrey;
 }
 
@@ -295,7 +291,7 @@ p {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: left;
-  padding-left:2rem;
+  padding-left: 2rem;
   width: 100%;
 }
 
@@ -328,7 +324,7 @@ p {
 .contact-form input[type="submit"] {
   width: 20%;
   font-weight: bold;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.5rem;
   color: #000;
 }
@@ -420,7 +416,6 @@ p {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  
 }
 
 .card-info {
@@ -468,7 +463,6 @@ p {
 
 /*------------- END Cards Styles-----------------*/
 
-
 /*-------------- Menu Dropdown para elegir USD o ARS -----*/
 .dropbtn {
   background-color: rgb(0, 4, 14);
@@ -482,8 +476,8 @@ p {
   justify-content: space-evenly;
   align-items: center;
 }
- /* impide que se centre dentro del nav */
- 
+/* impide que se centre dentro del nav */
+
 /* .dropdown {
   float: fixed;
   overflow: hidden;
@@ -494,7 +488,7 @@ p {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 100;
   top: 100%;
 }
@@ -506,12 +500,17 @@ p {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-
-.dropdown:hover .dropbtn {background-color: rgb(0, 4, 14);}
+.dropdown:hover .dropbtn {
+  background-color: rgb(0, 4, 14);
+}
 /* ------------ Media Queries ---------------- */
 
 /* Ppantallas pequeñas (teléfonos móviles) */
@@ -531,7 +530,15 @@ p {
   .card-info-price {
     font-size: 17px;
   }
-  
+  .slogan-container{
+    width: 70vw;
+    height: 70vh;
+    left: 15vw;
+  }
+  .slogan-text {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
 }
 
 /* Tipo tabletas */
@@ -614,53 +621,51 @@ p {
   font-style: italic;
   letter-spacing: 0.09rem;
 }
-.infoDolar{
+.infoDolar {
   z-index: 100;
   display: flex;
   position: fixed;
   background-color: rgb(0, 8, 28);
-  bottom:0vw;
-  right:0vw;
+  bottom: 0vw;
+  right: 0vw;
 }
-.dolar-btn-style{
+.dolar-btn-style {
   font-size: 1.5vw;
 }
 
-.btnEnviar{
+.btnEnviar {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2vw;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.form-container h4{
+.form-container h4 {
   font-family: system-ui;
   font-size: 1vw;
   font-style: italic;
   letter-spacing: 0.09rem;
 }
 
-.mapa{
-  position:fixed;
-  top:16vw;
-  right:7vw;
+.mapa {
+  position: fixed;
+  top: 16vw;
+  right: 7vw;
 }
 
-#closeBtn{
+#closeBtn {
   display: flex;
-  position:fixed;
-  right:10vw;
-  top:10vw;
+  position: fixed;
+  right: 10vw;
+  top: 10vw;
 }
-
 
 /*CSS
 --Animacion de los botones del menu
 */
 
-
-.position-relative{
+.position-relative {
   position: relative;
 }
 .anim-bottom::after {
@@ -671,7 +676,7 @@ p {
   width: 0;
   height: 0.25rem;
   background-color: gray;
-  transition: width 0.3s ease-in-out
+  transition: width 0.3s ease-in-out;
 }
 
 .anim-bottom:hover::after {
@@ -681,7 +686,7 @@ p {
 @keyframes anim-slogan {
   0% {
   }
-  50% {    
+  50% {
     background-color: #000a23;
     transform: scale(1.02);
   }
@@ -689,20 +694,19 @@ p {
   }
 }
 
-
 .slogan-container:hover {
-  animation: anim-slogan 2s linear ;
+  animation: anim-slogan 2s linear;
 }
 
-.dropdown button:hover{
+.dropdown button:hover {
   color: gray;
   text-decoration: underline;
 }
 
 /*Footer*/
 
-.slide-footer{
-  background-color: #00040e !important ; 
+.slide-footer {
+  background-color: #00040e !important ;
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -717,8 +721,8 @@ p {
   height: 1200px;
 } */
 
-.footer_copy{
-font-size: 12px;
+.footer_copy {
+  font-size: 12px;
 }
 
 .footer-content {
@@ -736,7 +740,7 @@ font-size: 12px;
 }
 
 .footer-categories li {
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 .footer-categories a {
