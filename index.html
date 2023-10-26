@@ -17,6 +17,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -134,16 +136,42 @@
             <a href id="closeBtn"><img src="resources/close.png"></a>
             <section class="form-container">
                 <h2>Contáctanos</h2>
+
+                <!-- 
                 <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
                     <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
                     title="Nombre sólo acepta letras y espacios en blanco" required>
+
                     <input type="email" name="correo" placeholder="Escribe tu correo" pattern="\w+@\w+\.\w+"
                     title="Formato de correo inválido" required>
+
                     <textarea name="comentarios" placeholder="Escribe tu consulta" cols="30" rows="10" required></textarea>
                     <div class="btnEnviar">
                     <input type="submit" value="Enviar"> 
                     </div>  
                 </form>
+                -->
+
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="abc@gmail.com" >
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Asunto</label>
+                        <input class="form-control" type="text" placeholder="Consulta sobre un Producto">
+                      </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Mensaje</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-10">
+                          <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                      </div>
+                </form>
+
                 <div class="mapa">
                 <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.1049050430962!2d-68.32516700767836!3d-54.814600184058044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22b5bad109bf%3A0x5498473dba43ebfc!2sUshuaia%2C%20Tierra%20del%20Fuego%20Province!5e0!3m2!1sen!2sar!4v1697160409089!5m2!1sen!2sar"   width="400"
                 height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
