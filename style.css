@@ -274,6 +274,7 @@ p {
 }
 
 .form-container {
+  position: relative;
   color: #fff;
   display: flex;
   flex-flow: column nowrap;
@@ -283,22 +284,21 @@ p {
   border: medium solid lightblue;
   border-radius: 5%;
   width: 90%;
-  height: 68vh;
+/*   height: 68vh; */
 }
 
 .contact-form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: left;
-  padding-left: 2rem;
+  align-items: center;
   width: 100%;
 }
 
 .contact-form * {
   display: block;
   margin-top: 0.8rem;
-  width: 60%;
+  width: 90%;
 }
 
 .contact-form > *::placeholder {
@@ -619,6 +619,7 @@ p {
   font-family: "Bebas Neue", sans-serif;
   font-size: 3.5vw;
   font-style: italic;
+  margin-top: 20px;
   letter-spacing: 0.09rem;
 }
 .infoDolar {
@@ -648,17 +649,37 @@ p {
   letter-spacing: 0.09rem;
 }
 
+.map-btn{
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
 .mapa {
-  position: fixed;
-  top: 16vw;
-  right: 7vw;
+  /* display: none; */
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.mapa h4{
+font-size: 12px;
+}
+
+.mapa iframe {
+  width: 70%;
 }
 
 #closeBtn {
-  display: flex;
-  position: fixed;
-  right: 10vw;
-  top: 10vw;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 /*CSS

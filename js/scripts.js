@@ -102,3 +102,26 @@ async function fetchData() {
 
   export var precioMoneda2=precioMoneda;
   console.log("Precio en scripts.js: ", precioMoneda);
+
+/* controlador de apertura de mapa */
+
+  const mapButton = document.querySelector(".map-btn")
+
+  let countControler = 1
+
+  mapButton.addEventListener("click",()=>{
+
+    const divMap = document.querySelector(".mapa")
+
+    if(countControler){
+      divMap.style.display = "flex";
+      mapButton.textContent = "Cerrar Ubicación";
+      countControler = 0
+    }else{
+      divMap.style.display = "none";
+      mapButton.textContent = "Abrir Ubicación"
+      countControler = 1
+      
+    }
+
+  })
