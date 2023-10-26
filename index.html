@@ -136,31 +136,18 @@
             <a href id="closeBtn"><img src="resources/close.png"></a>
             <section class="form-container">
                 <h2 class="contactanos">Contáctanos</h2>
-                <!--
-                <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
-                    
-                    <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-                    title="Nombre sólo acepta letras y espacios en blanco" required>
-                    <input type="email" name="correo" placeholder="Escribe tu correo" pattern="\w+@\w+\.\w+"
-                    title="Formato de correo inválido" required>
-                    <textarea name="comentarios" placeholder="Escribe tu consulta" cols="30" rows="10" required></textarea>
-                    <div class="btnEnviar">
-                    <input type="submit" value="Enviar"> 
-                    </div>  
-                </form>
-            -->
             <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
                 <div class="form-group">
                   <label for="inputEmail" >Email</label>
-                  <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="abc@gmail.com" >
+                  <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="abc@gmail.com" name="mail">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Asunto</label>
-                    <input class="form-control" type="text" placeholder="Consulta sobre un Producto">
+                    <input class="form-control" type="text" placeholder="Consulta sobre un Producto" name="asunto">
                   </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Mensaje</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
+                    <label for="exampleFormControlTextarea1">Consulta</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje" name="consulta"></textarea>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-10">
