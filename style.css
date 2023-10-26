@@ -283,7 +283,7 @@ p {
   border: medium solid lightblue;
   border-radius: 5%;
   width: 80%;
-  height: 68vh;
+  height: 70vh;
 }
 
 .contactanos{
@@ -625,6 +625,7 @@ p {
   font-size: 3.5vw;
   font-style: italic;
   letter-spacing: 0.09rem;
+  margin-top:2rem;
 }
 .infoDolar {
   z-index: 100;
@@ -646,6 +647,7 @@ p {
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
   margin-left: 5rem;
 }
 
@@ -658,8 +660,8 @@ p {
 
 .mapa {
   position: fixed;
-  top: 16vw;
-  right:11vw;
+  top: 15vw;
+  right:12vw;
 }
 
 #closeBtn {
