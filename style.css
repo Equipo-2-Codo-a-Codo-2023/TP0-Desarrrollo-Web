@@ -282,10 +282,13 @@ p {
   background: linear-gradient(180deg, #00040e, #000a23);
   border: medium solid lightblue;
   border-radius: 5%;
-  width: 90%;
+  width: 80%;
   height: 68vh;
 }
 
+.contactanos{
+  margin-top: 1rem;
+}
 .contact-form {
   display: flex;
   flex-flow: column nowrap;
@@ -297,8 +300,9 @@ p {
 
 .contact-form * {
   display: block;
-  margin-top: 0.8rem;
-  width: 60%;
+  margin-top: 0.01rem;
+  margin-bottom: 0.2rem;
+  width:70%;
 }
 
 .contact-form > *::placeholder {
@@ -615,6 +619,7 @@ p {
   font-size: 100%;;
 } */
 
+
 .form-container h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 3.5vw;
@@ -633,12 +638,15 @@ p {
   font-size: 1.5vw;
 }
 
-.btnEnviar {
+.btn-primary {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2vw;
+  font-style: italic;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
+  margin-left: 5rem;
 }
 
 .form-container h4 {
@@ -651,13 +659,13 @@ p {
 .mapa {
   position: fixed;
   top: 16vw;
-  right: 7vw;
+  right:11vw;
 }
 
 #closeBtn {
   display: flex;
   position: fixed;
-  right: 10vw;
+  right: 12vw;
   top: 10vw;
 }
 
