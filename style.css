@@ -72,8 +72,6 @@ header {
   /*letter-spacing: .5rem;*/
   width: inherit;
   max-height: inherit;
-  padding-left: 10vw;
-  padding-top: 1.1vw;
 }
 
 .category-link {
@@ -299,7 +297,7 @@ p {
 
 .contact-form * {
   display: block;
-  /*margin-top: 0.8rem;*/
+  margin-top: 0.8rem;
   width: 60%;
 }
 
@@ -623,7 +621,6 @@ p {
   font-style: italic;
   letter-spacing: 0.09rem;
 }
-
 .infoDolar {
   z-index: 100;
   display: flex;
