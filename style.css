@@ -297,7 +297,9 @@ p {
 
 .contact-form * {
   display: block;
-  margin-top: 0.8rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.3rem;
+  margin-left:2rem;
   width: 90%;
 }
 
@@ -640,8 +642,12 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #3876BF;
+  margin-left: auto;
+  margin-right: auto;
+  width:10rem;
+  height:3rem;
 }
-
 .form-container h4 {
   font-family: system-ui;
   font-size: 1vw;

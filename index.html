@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="./style.css">
     <script src="js/scripts.js"></script>
     <script type="module" src="./js/cards-Controllers/men-cards-controller.js"></script>
@@ -135,20 +138,46 @@
             <section class="form-container">
                 <a href id="closeBtn"><img src="resources/close.png"></a>
                 <h2>Contáctanos</h2>
+                <!--
                 <form class="contact-form" action="https://formsubmit.co/229e0eb5bd44da70b4acda43fe13698a" method="POST" onsubmit="return validarFormularioDeContacto()">
                     <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
                     title="Nombre sólo acepta letras y espacios en blanco" required>
+
                     <input type="email" name="correo" placeholder="Escribe tu correo" 
                     title="Formato de correo inválido" pattern="\w+@\w+\.\w+" required >
+
                     <textarea name="comentarios" placeholder="Escribe tu consulta" cols="30" rows="10" required></textarea>
                     <div class="btnEnviar">
                     <input type="submit" value="Enviar"> 
                     </div>  
                 </form>
-    
+                -->
+               
+                <form class="contact-form" action="https://formsubmit.co/229e0eb5bd44da70b4acda43fe13698a" method="POST" onsubmit="return validarFormularioDeContacto()">
+                    <div class="form-group">
+                      <label for="inputEmail">Email</label>
+                      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="abc@gmail.com" name="correo"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Asunto</label>
+                        <input class="form-control" type="text" placeholder="Consulta sobre un Producto" name="asunto" required>
+                      </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Consulta</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje" name="consulta"></textarea>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-10">
+                          <button type="submit" class="btnEnviar" value="Enviar">Enviar</button>
+                        </div>
+                      </div>
+                </form>
+
+
+
                 <div class="map-btn">Abrir Ubicación</div>
                 <div class="mapa">
-                    <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.1049050430962!2d-68.32516700767836!3d-54.814600184058044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22b5bad109bf%3A0x5498473dba43ebfc!2sUshuaia%2C%20Tierra%20del%20Fuego%20Province!5e0!3m2!1sen!2sar!4v1697160409089!5m2!1sen!2sar"   style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1448.3908383121657!2d-68.32584447908197!3d-54.81200374793463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c231637a7f4a3%3A0xcd5582e0de8c4ebc!2sOlegario%20Andrade%20512%2C%20V9410CKD%20Ushuaia%2C%20Tierra%20del%20Fuego!5e0!3m2!1sen!2sar!4v1698377168443!5m2!1sen!2sar" width="900" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <h4>Encontranos en Tierra del Fuego - Usuahia - Calle1 NroX</h4>
             </div>
             </section>

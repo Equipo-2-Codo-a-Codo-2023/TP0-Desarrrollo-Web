@@ -1,22 +1,22 @@
 const validarFormularioDeContacto = () => {
     try {
         console.log("ENTRE A VALIDACIONES DE FOMRULARIO DE CONTACTO");
-        const nombre = document.querySelector('[name="nombre"]').value
+        const asunto = document.querySelector('[name="asunto"]').value
         const correo = document.querySelector('[name="correo"]').value
-        const comentarios = document.querySelector('textarea').value
+        const consulta = document.querySelector('[name="consulta"]').value
 
         //RegEx para validaciones
 
         const nameRegex = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/
         const correoRegex = /\w+@\w+\.\w+/
 
-        console.log("nombre", !nameRegex.test(nombre));
+        console.log("asunto", !nameRegex.test(asunto));
         console.log("correo", !correoRegex.test(correo));
-        console.log("comentario", comentarios.trim() === "");
+        console.log("consulta", consulta.trim() === "");
 
         // Validación de "nombre"
-        if (!nameRegex.test(nombre)) {
-            alert("Nombre solo acepta letras y espacios en blanco.");
+        if (!nameRegex.test(asunto)) {
+            alert("Asunto solo acepta letras y espacios en blanco.");
             return false;
         }
 
@@ -27,7 +27,7 @@ const validarFormularioDeContacto = () => {
         }
 
         // Validación de"comentarios"
-        if (comentarios.trim() === "") {
+        if (consulta.trim() === "") {
             alert("Por favor, escribe tu consulta.");
             return false;
         }
