@@ -519,7 +519,6 @@ p {
 
 /* Ppantallas pequeñas (teléfonos móviles) */
 
-
 @media (max-width: 767px) {
   .access-box {
     width: 30vw;
@@ -545,7 +544,6 @@ p {
     margin-bottom: 3rem;
   }
 }
-
 
 /* Tipo tabletas */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -591,12 +589,13 @@ p {
     min-height: 40%;
   }
   .card-info-description {
-    font-size: 16px;
+    font-size: 18px;
   }
   .card-info-price {
     font-size: 25px;
   }
 }
+
 
 /* ------------------------------------------ */
 /* .card-info-tittle {
