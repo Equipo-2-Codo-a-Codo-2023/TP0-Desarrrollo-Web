@@ -95,6 +95,8 @@ header {
 
 p {
   font-size: 0.6rem;
+  margin:none;
+  padding: none;
 }
 
 .access-box img {
@@ -558,6 +560,13 @@ p {
   .card-info-price {
     font-size: 18px;
   }
+  .footer-content {
+    margin-bottom: none;
+  }
+  .slide-footer {
+    margin-bottom: none;
+  }
+  
 }
 
 /* Pantallas de escritorio estándar */
@@ -733,6 +742,15 @@ p {
   height: 1200px;
 } */
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #00040e;
+  text-align: center;
+  padding: 20px 0;
+}
+
 .footer_copy {
   font-size: 12px;
 }
@@ -749,6 +767,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
+  background-color: #00040e;
 }
 
 .footer-categories li {
