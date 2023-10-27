@@ -541,6 +541,33 @@ p {
     font-size: 2rem;
     margin-bottom: 3rem;
   }
+  .form-group{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+  }
+  .form-group label,
+  .form-group input,
+  .form-group textarea{
+    margin: 0.6vh 0;
+    width: 80%;
+  }
+  .btnEnviar{
+    font-size: 18px !important;
+    width: 35% !important;
+    height: 30px !important;
+    padding: 8px 0;
+  }
+  .col-sm-10{
+    margin: 0;
+  }
+  .mapa h4{
+    width: 80%;
+    text-align: center;
+  }
 }
 
 /* Tipo tabletas */
