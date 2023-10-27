@@ -568,6 +568,9 @@ p {
     width: 80%;
     text-align: center;
   }
+  .form-container h2{
+    font-size: 22px !important;
+  }
 }
 
 /* Tipo tabletas */
