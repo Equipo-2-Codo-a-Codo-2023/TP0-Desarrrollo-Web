@@ -742,14 +742,6 @@ p {
   height: 1200px;
 } */
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #00040e;
-  text-align: center;
-  padding: 20px 0;
-}
 
 .footer_copy {
   font-size: 12px;
