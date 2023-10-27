@@ -715,6 +715,7 @@ p {
 
 /*Footer*/
 
+
 .slide-footer {
   background-color: #00040e !important ;
   color: #fff;
@@ -723,7 +724,7 @@ p {
   height: 10vh;
 }
 
-/* footer {
+/*footer {
   background-color: #00040e;
   color: #fff;
   text-align: center;
