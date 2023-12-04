@@ -34,7 +34,7 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     const formData = new FormData();
     formData.append('gestion', gestion); // Agregar el detalle a los datos del formulario
 
-    fetch(`http://P4B10.mysql.pythonanywhere-services.com/mensajes/mensajes/${id}`, {
+    fetch(`http://P4B10.mysql.pythonanywhere-services.com/mensajes/${id}`, {
       method: 'PUT',
       body: formData
     })
