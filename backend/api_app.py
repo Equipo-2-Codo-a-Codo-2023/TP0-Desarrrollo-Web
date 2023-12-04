@@ -77,7 +77,7 @@ class Mensaje:
          return self.cursor.fetchone()
 
 
-mensaje = Mensaje(host='localhost', user='root', password='', database='mensajes')
+mensaje = Mensaje(host='P4B10.mysql.pythonanywhere-services.com', user='P4B10', password='Grupo6CodoaCodo', database='mensajes')
 
 
 

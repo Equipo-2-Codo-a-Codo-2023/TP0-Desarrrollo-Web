@@ -1,11 +1,11 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevenir el envío por defecto del formulario
     
     // Obtener los datos del formulario
     const formData = new FormData(document.getElementById('contactForm'));
 
     // Realizar el envío utilizando fetch
-    fetch('http://127.0.0.1:5000/mensajes', {
+    fetch('http://P4B10.mysql.pythonanywhere-services.com/mensajes/mensajes', {
     method: 'POST',
     body: formData
     })
