@@ -9,7 +9,7 @@ import time, datetime
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/*": {"origins": "*"}}) 
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 class Mensaje:
 
@@ -43,12 +43,12 @@ class Mensaje:
         self.conn.commit()
         self.cursor.close()
         self.cursor = self.conn.cursor(dictionary=True)
-        
+
     def enviar_mensaje(self, email, asunto, consulta):
         sql = "INSERT INTO mensajes(email, asunto, mensaje, fecha_envio) VALUES (%s, %s, %s, %s)"
         fecha_envio = datetime.datetime.now()
         valores = (email, asunto, consulta, fecha_envio)
-        self.cursor.execute(sql, valores)        
+        self.cursor.execute(sql, valores)
         self.conn.commit()
         return True
 
@@ -64,20 +64,20 @@ class Mensaje:
         self.cursor.execute(sql, valores)
         self.conn.commit()
         return self.cursor.rowcount > 0
-    
+
     def eliminar_mensaje(self, id):
         self.cursor.execute(f"DELETE FROM mensajes WHERE id = {id}")
         self.conn.commit()
         return self.cursor.rowcount > 0
 
-    
+
     def mostrar_mensaje(self, id):
          sql = f"SELECT id,email, asunto, mensaje, fecha_envio, leido, gestion, fecha_gestion FROM mensajes WHERE id = {id}"
          self.cursor.execute(sql)
          return self.cursor.fetchone()
 
 
-mensaje = Mensaje(host='P4B10.mysql.pythonanywhere-services.com', user='P4B10', password='grupo06cac', database='mensajes')
+mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='mensajes')
 
 
 
@@ -90,17 +90,17 @@ def listar_mensajes():
 def agregar_consulta():
     asunto = request.form['asunto']
     email = request.form['email']
-    consulta = request.form['mensaje']  
+    consulta = request.form['mensaje']
 
     if mensaje.enviar_mensaje(email,asunto, consulta):
         return jsonify({"mensaje": "Mensaje agregado"}), 201
     else:
         return jsonify({"mensaje": "No fue posible registrar el mensaje"}), 400
-  
+
 @app.route("/mensajes/<int:id>", methods=["PUT"])
 def responder_mensaje(id):
     gestion = request.form.get("gestion")
-    
+
     if mensaje.responder_mensaje(id, gestion):
         return jsonify({"mensaje": "Mensaje modificado"}), 200
     else:
