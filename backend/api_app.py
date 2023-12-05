@@ -80,7 +80,6 @@ class Mensaje:
 mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='mensajes')
 
 
-
 @app.route("/mensajes", methods=["GET"])
 def listar_mensajes():
     respuesta = mensaje.listar_mensajes()
