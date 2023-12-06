@@ -1,5 +1,5 @@
 document.getElementById('btnTraerMensajes').addEventListener('click', () => {
-    fetch('https://pablosl.pythonanywhere.com/mensajes')
+    fetch('http://127.0.0.1:5000/mensajes')
       .then(response => response.json())
       .then(datos => {
         console.log("datos", datos)
@@ -42,7 +42,7 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     const formData = new FormData();
     formData.append('gestion', gestion); // Agregar el detalle a los datos del formulario
 
-    fetch(`https://pablosl.pythonanywhere.com/mensajes/${id}`, {
+    fetch(`http://127.0.0.1:5000/mensajes/${id}`, {
       method: 'PUT',
       body: formData
     })
@@ -54,4 +54,22 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     .catch(error => {
       console.error('Error al enviar los datos:', error);
     });
+});
+
+
+document.getElementById('btnEliminar').addEventListener('click', function(event) {
+  event.preventDefault(); // Evitar el envío del formulario por defecto
+  // Obtener los valores de los campos
+  const id = document.getElementById('idInput').value;
+  fetch(`http://127.0.0.1:5000/mensajes/${id}`, {
+    method: 'DELETE',
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Respuesta del servidor:', data);
+    // Aquí podrías mostrar una confirmación al usuario o hacer algo con la respuesta del servidor
+  })
+  .catch(error => {
+    console.error('Error al enviar los datos:', error);
+  });
 });

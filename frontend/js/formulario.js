@@ -3,15 +3,16 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     
     // Obtener los datos del formulario
     const formData = new FormData(document.getElementById('contactForm'));
-
+    //URL https://pablosl.pythonanywhere.com/mensajes
     // Realizar el envío utilizando fetch
-    fetch('https://pablosl.pythonanywhere.com/mensajes', {
+    fetch('http://127.0.0.1:5000/mensajes', {
     method: 'POST',
     body: formData
     })
     .then(response => {
     if (response.ok) {
         alert('Datos enviados correctamente');
+        /*
         // Ocultar formulario
         //document.getElementById('contactForm').style.display = 'none'; 
         // Mostrar el mensaje de "Datos enviados"
@@ -26,7 +27,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         
         // Redirigir a index.html
         window.location.href = '../index.html';
-        }, 2000);
+        }, 2000); 
+        */
     } else {
         throw new Error('Error al enviar los datos');
     }

@@ -103,7 +103,8 @@ class Mensaje:
 
 
 # Creamos el objeto
-mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='pablosl$mensajes')
+#mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='pablosl$mensajes')
+mensaje = Mensaje(host='localhost', user='root', password='', database='mensajes')
 
 
 #--------------------------------------------------------------------
@@ -138,11 +139,19 @@ def responder_mensaje(id):
     else:
         return jsonify({"mensaje": "Mensaje no encontrado"}), 403
 
+@app.route("/mensajes/<int:id>", methods=["DELETE"])
+def eliminar_mensaje(id):
+    #Recojo los datos del form
+    if mensaje.eliminar_mensaje(id):
+        return jsonify({"mensaje": "Mensaje modificado"}), 200
+    else:
+        return jsonify({"mensaje": "Mensaje no encontrado"}), 403
+
 
 # mensaje.enviar_mensaje("Matias", "Seminara", "123456789", "matiasseminara@gmail.com", "Esta consulta es para ver la conexion a la base de datos")
 # respuesta = mensaje.listar_mensajes()
 # print(mensaje.responder_mensaje(1, "Ya le contesté"))
-# print(mensaje.eliminar_mensaje(1))
+#print(mensaje.eliminar_mensaje(2))
 # print(mensaje.mostrar_mensaje(2))
 
 
