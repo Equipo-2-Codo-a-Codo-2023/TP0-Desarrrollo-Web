@@ -65,10 +65,10 @@ class Mensaje:
         self.cursor = self.conn.cursor(dictionary=True)
         
     #----------------------------------------------------------------
-    def enviar_mensaje(self, nombre, apellido, telefono, email, consulta):
+    def enviar_mensaje(self, mail, asunto, mensaje):
         sql = "INSERT INTO mensajes(email, asunto, mensaje, fecha_envio) VALUES (%s, %s, %s, %s"
         fecha_envio = datetime.datetime.now()
-        valores = (nombre, apellido, telefono, email, consulta, fecha_envio)
+        valores = (mail, asunto, mensaje, fecha_envio)
         self.cursor.execute(sql, valores)        
         self.conn.commit()
         return True
@@ -103,7 +103,7 @@ class Mensaje:
 
 
 # Creamos el objeto
-mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='mensajes')
+mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='pablosl$mensajes')
 
 
 #--------------------------------------------------------------------
