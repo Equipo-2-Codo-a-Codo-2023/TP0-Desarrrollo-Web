@@ -9,12 +9,19 @@ document.getElementById('btnTraerMensajes').addEventListener('click', () => {
         // Iterar sobre los datos y agregar filas a la tabla
         datos.forEach(dato => {
           const fila = document.createElement('tr');
+          let leido='';
+          if (dato.leido==0){
+            leido="No"
+          }
+          else {
+            leido="Si"
+          }
           fila.innerHTML = `
             <td>${dato.id}</td>
             <td>${dato.email}</td>
             <td>${dato.fecha_envio}</td>
             <td>${dato.mensaje}</td>
-            <td>${dato.leido}</td>
+            <td>${leido}</td>
             <td>${dato.gestion}</td>
           `;
           tablaBody.appendChild(fila);

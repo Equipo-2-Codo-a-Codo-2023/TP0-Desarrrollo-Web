@@ -137,7 +137,7 @@
                 <a href id="closeBtn"><img src="resources/close.png"></a>
                 <h2>Contáctanos</h2>
 <!------------------------------------------------------------------------------------------------------->
-                <form id="contactForm" class="contact-form" method="POST">
+                <form id="contactForm" class="contact-form"  onsubmit="return validarFormularioDeContacto()" method="POST">
                     <div class="form-group">
                       <label for="inputEmail">Email</label>
                       <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="abc@gmail.com" name="email"  required>
