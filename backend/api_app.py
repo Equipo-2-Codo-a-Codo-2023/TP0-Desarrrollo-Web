@@ -138,17 +138,6 @@ def responder_mensaje(id):
     else:
         return jsonify({"mensaje": "Mensaje no encontrado"}), 403
 
-#--------------------------------------------------------------------
-
-@app.route("/mensajes/<int:id>", methods=["DELETE"])
-def eliminar_mensaje(id):
-    #Recojo los datos del form
-    id = request.form.get("id")
-    if mensaje.eliminar_mensaje(id):
-        return jsonify({"mensaje": "Mensaje eliminado"}), 200
-    else:
-        return jsonify({"mensaje": "Mensaje no encontrado"}), 403
-
 
 # mensaje.enviar_mensaje("Matias", "Seminara", "123456789", "matiasseminara@gmail.com", "Esta consulta es para ver la conexion a la base de datos")
 # respuesta = mensaje.listar_mensajes()
