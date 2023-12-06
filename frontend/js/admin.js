@@ -1,5 +1,5 @@
 document.getElementById('btnTraerMensajes').addEventListener('click', () => {
-    fetch('http://P4B10.mysql.pythonanywhere-services.com/mensajes')
+    fetch('https://pablosl.pythonanywhere.com/mensajes')
       .then(response => response.json())
       .then(datos => {
         console.log("datos", datos)
@@ -15,6 +15,7 @@ document.getElementById('btnTraerMensajes').addEventListener('click', () => {
             <td>${dato.fecha_envio}</td>
             <td>${dato.mensaje}</td>
             <td>${dato.leido}</td>
+            <td>${dato.gestion}</td>
           `;
           tablaBody.appendChild(fila);
         });
@@ -34,7 +35,7 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     const formData = new FormData();
     formData.append('gestion', gestion); // Agregar el detalle a los datos del formulario
 
-    fetch(`http://P4B10.mysql.pythonanywhere-services.com/mensajes/${id}`, {
+    fetch(`https://pablosl.pythonanywhere.com/mensajes/${id}`, {
       method: 'PUT',
       body: formData
     })
