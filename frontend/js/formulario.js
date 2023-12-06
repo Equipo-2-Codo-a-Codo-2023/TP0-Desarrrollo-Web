@@ -11,8 +11,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     })
     .then(response => {
     if (response.ok) {
+        alert('Datos enviados correctamente');
         // Ocultar formulario
-        document.getElementById('contactForm').style.display = 'none'; 
+        //document.getElementById('contactForm').style.display = 'none'; 
         // Mostrar el mensaje de "Datos enviados"
         document.getElementById('mensajeEnviado').style.display = 'block';
         
@@ -22,6 +23,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         document.getElementById('contactForm').reset();
         document.getElementById('contactForm').style.display = 'block'; 
         document.getElementById('mensajeEnviado').style.display = 'none';
+        
+        // Redirigir a index.html
+        window.location.href = '../index.html';
         }, 2000);
     } else {
         throw new Error('Error al enviar los datos');
