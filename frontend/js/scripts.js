@@ -125,3 +125,24 @@ async function fetchData() {
     }
 
   })
+
+
+/* conexion con back end desde el fomrulario */
+
+const formulario = document.querySelector("#contact-form")
+formulario.addEventListener("submit", (event)=>{
+  event.preventDefault()
+
+  const formData = new FormData(formulario)
+
+  fetch("http://127.0.0.1:5000/mensajes", {
+    method:"POST",
+    body: formData
+  }).then(response => {
+    if(response.ok){
+      closeBtn.click()
+    }else{
+      throw new Error("Error al enviar los datos")
+    }
+  }).catch( error => console.log("Error", error))
+})
