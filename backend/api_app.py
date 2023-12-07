@@ -1,50 +1,31 @@
-#--------------------------------------------------------------------
-# Instalar con pip install Flask
 from flask import Flask, request, jsonify
-#from flask import request
-
-# Instalar con pip install flask-cors
 from flask_cors import CORS
-
-
-# Instalar con pip install mysql-connector-python
 import mysql.connector
-
-# No es necesario instalar, es parte del sistema standard de Python
 import os
 import time, datetime
 #--------------------------------------------------------------------
 
 
 app = Flask(__name__)
-
-# Permitir acceso desde cualquier origen externo
 CORS(app, resources={r"/*": {"origins": "*"}}) 
 
 class Mensaje:
     #----------------------------------------------------------------
-    # Constructor de la clase
     def __init__(self, host, user, password, database):
-        # Primero, establecemos una conexión sin especificar la base de datos
         self.conn = mysql.connector.connect(
             host=host,
             user=user,
             password=password
         )
         self.cursor = self.conn.cursor()
-
-        # Intentamos seleccionar la base de datos
         try:
             self.cursor.execute(f"USE {database}")
         except mysql.connector.Error as err:
-            # Si la base de datos no existe, la creamos
             if err.errno == mysql.connector.errorcode.ER_BAD_DB_ERROR:
                 self.cursor.execute(f"CREATE DATABASE {database}")
                 self.conn.database = database
             else:
                 raise err
-
-        # Una vez que la base de datos está establecida, creamos la tabla si no existe
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS mensajes (
             id int(11) NOT NULL AUTO_INCREMENT,
             email varchar(60) NOT NULL,
@@ -59,8 +40,6 @@ class Mensaje:
             ''')
 
         self.conn.commit()
-
-        # Cerrar el cursor inicial y abrir uno nuevo con el parámetro dictionary=True
         self.cursor.close()
         self.cursor = self.conn.cursor(dictionary=True)
         
@@ -102,9 +81,8 @@ class Mensaje:
          return self.cursor.fetchone()
 
 
-# Creamos el objeto
 mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='pablosl$mensajes')
-#mensaje = Mensaje(host='localhost', user='root', password='', database='mensajes')
+#mensaje = Mensaje(host='localhost', user='root', password='', database='mensajes') #Descomentar para usar en local
 
 
 #--------------------------------------------------------------------
@@ -131,7 +109,6 @@ def agregar_producto():
 #--------------------------------------------------------------------
 @app.route("/mensajes/<int:id>", methods=["PUT"])
 def responder_mensaje(id):
-    #Recojo los datos del form
     gestion = request.form.get("gestion")
     
     if mensaje.responder_mensaje(id, gestion):
@@ -141,18 +118,10 @@ def responder_mensaje(id):
 
 @app.route("/mensajes/<int:id>", methods=["DELETE"])
 def eliminar_mensaje(id):
-    #Recojo los datos del form
     if mensaje.eliminar_mensaje(id):
         return jsonify({"mensaje": "Mensaje modificado"}), 200
     else:
         return jsonify({"mensaje": "Mensaje no encontrado"}), 403
-
-
-# mensaje.enviar_mensaje("Matias", "Seminara", "123456789", "matiasseminara@gmail.com", "Esta consulta es para ver la conexion a la base de datos")
-# respuesta = mensaje.listar_mensajes()
-# print(mensaje.responder_mensaje(1, "Ya le contesté"))
-#print(mensaje.eliminar_mensaje(2))
-# print(mensaje.mostrar_mensaje(2))
 
 
 #--------------------------------------------------------------------
