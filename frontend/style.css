@@ -287,6 +287,15 @@ p {
 /*   height: 68vh; */
 }
 
+#mensajeEnviado {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  margin-top: 20px;
+  letter-spacing: 0.09rem;
+  color:green;
+  margin-left: 65vw;
+}
+
 .contact-form {
   display: flex;
   flex-flow: column nowrap;

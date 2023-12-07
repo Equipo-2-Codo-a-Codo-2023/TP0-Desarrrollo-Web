@@ -1,4 +1,4 @@
-const validarFormularioDeContacto = () => {
+export const validarFormularioDeContacto = () => {
     try {
         console.log("ENTRE A VALIDACIONES DE FOMRULARIO DE CONTACTO");
         const asunto = document.querySelector('[name="asunto"]').value
@@ -37,5 +37,6 @@ const validarFormularioDeContacto = () => {
     }
     return true;
 }
+
 
 

@@ -103,8 +103,8 @@ class Mensaje:
 
 
 # Creamos el objeto
-#mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='pablosl$mensajes')
-mensaje = Mensaje(host='localhost', user='root', password='', database='mensajes')
+mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='pablosl$mensajes')
+#mensaje = Mensaje(host='localhost', user='root', password='', database='mensajes')
 
 
 #--------------------------------------------------------------------

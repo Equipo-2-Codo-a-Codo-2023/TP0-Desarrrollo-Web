@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     
     <link rel="stylesheet" href="./style.css">
-    <script src="js/scripts.js"></script>
+    <script type="module" src="./js/scripts.js"></script>
     <script type="module" src="./js/cards-Controllers/men-cards-controller.js"></script>
     <script type="module" src="./js/cards-Controllers/women-cards-controller.js"></script>
     <script type="module" src="./js/cards-Controllers/kids-cards-controller.js"></script>
@@ -133,31 +133,34 @@
         <input type="checkbox"  id="botonHelp" class="modal-help-button" />
         <label class="modal-help-txt"><img src="./assets/help.svg" alt=""></label>
         <section class="help-menu">
-            <section class="form-container">
+            <section id="form-container" class="form-container">
                 <a href id="closeBtn"><img src="resources/close.png"></a>
                 <h2>Contáctanos</h2>
-<!------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------->
                 <form id="contactForm" class="contact-form"  onsubmit="return validarFormularioDeContacto()" method="POST">
                     <div class="form-group">
-                      <label for="inputEmail">Email</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="abc@gmail.com" name="email"  required>
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="abc@gmail.com"  required>
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput">Asunto</label>
-                        <input  class="form-control" type="text" placeholder="Consulta sobre un Producto" name="asunto" id="asunto" required>
+                        <input type="text" id="asunto" name="asunto" class="form-control" placeholder="Consulta sobre un Producto" required>
                       </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Consulta</label>
-                        <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe aquí tu mensaje" name="mensaje"></textarea>
+                        <textarea id="mensaje" name="mensaje" class="form-control" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-10">
-                          <button id="submit" type="submit" class="btnEnviar" value="Enviar">Enviar</button>
+                            <button id="submit" type="submit" class="btnEnviar" value="Enviar">Enviar</button>
                         </div>
                       </div>
-                      <div id="mensajeEnviado" style="display: none;">Datos enviados</div>
+                      <div id="mensajeEnviado" style="display: none;">
+                        Consulta Enviada
+                      </div>
                 </form>
-<!------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------->
+
                 <div class="map-btn">Abrir Ubicación</div>
                 <div class="mapa">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1448.3908383121657!2d-68.32584447908197!3d-54.81200374793463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c231637a7f4a3%3A0xcd5582e0de8c4ebc!2sOlegario%20Andrade%20512%2C%20V9410CKD%20Ushuaia%2C%20Tierra%20del%20Fuego!5e0!3m2!1sen!2sar!4v1698377168443!5m2!1sen!2sar" width="900" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

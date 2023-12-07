@@ -1,40 +1,41 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir el envío por defecto del formulario
-    
-    // Obtener los datos del formulario
-    const formData = new FormData(document.getElementById('contactForm'));
-    //URL https://pablosl.pythonanywhere.com/mensajes
-    // Realizar el envío utilizando fetch
-    fetch('http://127.0.0.1:5000/mensajes', {
-    method: 'POST',
-    body: formData
-    })
-    .then(response => {
-    if (response.ok) {
-        alert('Datos enviados correctamente');
-        /*
-        // Ocultar formulario
-        //document.getElementById('contactForm').style.display = 'none'; 
-        // Mostrar el mensaje de "Datos enviados"
-        document.getElementById('mensajeEnviado').style.display = 'block';
-        
-        // Reiniciar el formulario después de 2 segundos (puedes ajustar el tiempo)
-        setTimeout(function() {
-        // Ocultar formulario
-        document.getElementById('contactForm').reset();
-        document.getElementById('contactForm').style.display = 'block'; 
-        document.getElementById('mensajeEnviado').style.display = 'none';
-        
-        // Redirigir a index.html
-        window.location.href = '../index.html';
-        }, 2000); 
-        */
-    } else {
-        throw new Error('Error al enviar los datos');
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('contactForm');
+
+    if (form) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevenir el envío por defecto del formulario
+
+            // Obtener los datos del formulario
+            const formData = new FormData(form);
+
+            // Realizar el envío utilizando fetch
+            fetch('https://pablosl.pythonanywhere.com/mensajes', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Respuesta del servidor:', data);
+
+                    if (data.mensaje === 'Mensaje agregado') {
+                        document.getElementById('mensajeEnviado').style.display = 'block';
+                        // Reiniciar el formulario después de 2 segundos (puedes ajustar el tiempo)
+                        setTimeout(function() {
+                        // Ocultar formulario
+                        document.getElementById('contactForm').reset();
+                        document.getElementById('contactForm').style.display = 'block';  
+                        document.getElementById('mensajeEnviado').style.display = 'none';  
+                        document.getElementById('closeBtn').click();               
+                        }, 2000); 
+                        // Puedes realizar acciones adicionales aquí si es necesario
+                    } else {
+                        throw new Error('Error al enviar los datos');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
     }
-    })
-    .catch(error => {
-    console.error('Error:', error);
-    });
 });
 
