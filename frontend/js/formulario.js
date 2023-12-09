@@ -1,3 +1,5 @@
+//URL de Python Anyhwere: https://pablosl.pythonanywhere.com/mensajes
+//URL de LocalHost: http://127.0.0.1:5000/mensajes
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('contactForm');
 
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const formData = new FormData(form);
 
             // Realizar el envío utilizando fetch
-            fetch('https://pablosl.pythonanywhere.com/mensajes', {
+            fetch('http://127.0.0.1:5000/mensajes', {
                 method: 'POST',
                 body: formData,
             })

@@ -81,8 +81,8 @@ class Mensaje:
          return self.cursor.fetchone()
 
 
-mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='pablosl$mensajes')
-#mensaje = Mensaje(host='localhost', user='root', password='', database='mensajes') #Descomentar para usar en local
+#mensaje = Mensaje(host='pablosl.mysql.pythonanywhere-services.com', user='pablosl', password='grupo06cac', database='pablosl$mensajes')
+mensaje = Mensaje(host='localhost', user='root', password='', database='mensajes') #Descomentar para usar en local
 
 
 #--------------------------------------------------------------------

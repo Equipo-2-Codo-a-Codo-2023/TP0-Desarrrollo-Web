@@ -1,9 +1,11 @@
+//URL de Python Anyhwere: https://pablosl.pythonanywhere.com/mensajes
+//URL de LocalHost: http://127.0.0.1:5000/mensajes
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('btnTraerMensajes').click();
 });
 
 document.getElementById('btnTraerMensajes').addEventListener('click', () => {
-    fetch('https://pablosl.pythonanywhere.com/mensajes')
+    fetch('http://127.0.0.1:5000/mensajes')
       .then(response => response.json())
       .then(datos => {
         console.log("datos", datos)
@@ -50,7 +52,7 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     const formData = new FormData();
     formData.append('gestion', gestion); // Agregar el detalle a los datos del formulario
 
-    fetch(`https://pablosl.pythonanywhere.com/mensajes/${id}`, {
+    fetch(`http://127.0.0.1:5000/mensajes/${id}`, {
       method: 'PUT',
       body: formData
     })
