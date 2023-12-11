@@ -73,7 +73,7 @@ document.getElementById('btnEliminar').addEventListener('click', function(event)
   event.preventDefault(); // Evitar el envío del formulario por defecto
   // Obtener los valores de los campos
   const id = document.getElementById('idInput').value;
-  fetch(`https://pablosl.pythonanywhere.com/mensajes/${id}`, {
+  fetch(`http://127.0.0.1:5000/mensajes/${id}`, {
     method: 'DELETE',
   })
   .then(response => response.json())
